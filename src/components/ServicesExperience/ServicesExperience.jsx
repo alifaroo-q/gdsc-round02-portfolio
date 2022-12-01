@@ -1,37 +1,106 @@
-import React from 'react'
+import React from "react";
 import { MdBrush, MdEditCalendar, MdPiano } from "react-icons/md";
+import Card from "./Card";
+import data from "./serviceExperienceData";
+
+const serviceElements = data.map((service) => {
+  if (service.active) {
+    if (service.icon === "brush") {
+      return (
+        <Card
+          key={service.icon}
+          title={service.title}
+          text={service.text}
+          active={service.active}
+        >
+          <MdBrush
+            className={service.active ? "text-white" : "text-red-500"}
+            size="50"
+          />
+        </Card>
+      );
+    } else if (service.icon === "edit") {
+      return (
+        <Card
+          key={service.icon}
+          title={service.title}
+          text={service.text}
+          active={service.active}
+        >
+          <MdEditCalendar
+            className={service.active ? "text-white" : "text-red-500"}
+            size="50"
+          />
+        </Card>
+      );
+    } else {
+      return (
+        <Card
+          key={service.icon}
+          title={service.title}
+          text={service.text}
+          active={service.active}
+        >
+          <MdPiano
+            className={service.active ? "text-white" : "text-red-500"}
+            size="50"
+          />
+        </Card>
+      );
+    }
+  } else {
+    if (service.icon === "brush") {
+      return (
+        <Card
+          key={service.icon}
+          title={service.title}
+          text={service.text}
+          active={service.active}
+        >
+          <MdBrush
+            className={service.active ? "text-white" : "text-red-500"}
+            size="50"
+          />
+        </Card>
+      );
+    } else if (service.icon === "edit") {
+      return (
+        <Card
+          key={service.icon}
+          title={service.title}
+          text={service.text}
+          active={service.active}
+        >
+          <MdEditCalendar
+            className={service.active ? "text-white" : "text-red-500"}
+            size="50"
+          />
+        </Card>
+      );
+    } else {
+      return (
+        <Card
+          key={service.icon}
+          title={service.title}
+          text={service.text}
+          active={service.active}
+        >
+          <MdPiano
+            className={service.active ? "text-white" : "text-red-500"}
+            size="50"
+          />
+        </Card>
+      );
+    }
+  }
+});
 
 const ServicesExperience = () => {
   return (
-    <main className="mt-28 md:mt-44 mx-5 md:grid md:grid-cols-3 md:gap-3 md:w-3/4 md:mx-auto">
-      <div className="p-10 bg-gray-700 rounded-md">
-        <MdBrush className="text-red-500" size="50" />
-        <h3 className="mt-2 text-2xl text-white">UI Design</h3>
-        <p className="mt-3 text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing.
-        </p>
-        <p className="mt-3 uppercase text-red-500">Know More</p>
-      </div>
-
-      <div className="mt-5 md:mt-0 p-10 bg-red-500 rounded-md">
-        <MdEditCalendar className="text-white" size="50" />
-        <h3 className="mt-2 text-2xl text-white">Product Design</h3>
-        <p className="mt-3 text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing.
-        </p>
-        <p className="mt-3 uppercase text-white">Know More</p>
-      </div>
-
-      <div className="mt-5 md:mt-0 p-10 bg-gray-700 rounded-md">
-        <MdPiano className="text-red-500 -rotate-45" size="50" />
-        <h3 className="mt-2 text-2xl text-white">Branding</h3>
-        <p className="mt-3 text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing.
-        </p>
-        <p className="mt-3 uppercase text-red-500">Know More</p>
-      </div>
+    <main className="mt-24 md:mt-44 mx-5 md:grid md:grid-cols-3 md:gap-3 md:w-3/4 md:mx-auto">
+      {serviceElements}
     </main>
   );
-}
+};
 
-export default ServicesExperience
+export default ServicesExperience;
