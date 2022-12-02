@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <main className="mt-10 md:flex md:mt-24 md:justify-center md:items-center">
       <div className="flex justify-center">
-        <img src="src\assets\model.png" alt="model" height="400" width="300" />
+        <img src="\assets\model.png" alt="model" height="400" width="300" />
       </div>
 
       <div className="mt-10 md:mt-20 mx-5 md:w-[40%]">
