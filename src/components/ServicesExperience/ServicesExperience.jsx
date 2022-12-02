@@ -2,6 +2,7 @@ import React from "react";
 import { MdBrush, MdEditCalendar, MdPiano } from "react-icons/md";
 import Card from "./Card";
 import data from "./serviceExperienceData";
+import "./index.css";
 
 const serviceElements = data.map((service) => {
   if (service.active) {
@@ -97,7 +98,10 @@ const serviceElements = data.map((service) => {
 
 const ServicesExperience = () => {
   return (
-    <main className="mt-24 md:mt-44 mx-5 md:grid md:grid-cols-3 md:gap-3 md:w-3/4 md:mx-auto">
+    <main
+      id="main-service-area"
+      className="mt-24 md:mt-44 mx-5 md:grid md:grid-cols-3 md:gap-3"
+    >
       {serviceElements}
     </main>
   );

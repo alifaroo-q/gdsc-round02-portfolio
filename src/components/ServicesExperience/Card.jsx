@@ -5,8 +5,8 @@ const Card = (props) => {
     <div
       className={
         props.active
-          ? "p-10 mt-5 bg-red-500 rounded-md"
-          : "p-10 mt-5 bg-gray-700 rounded-md"
+          ? "p-10 mt-5 bg-red-500 rounded-md hover:bg-red-900 transition-all ease-out shadow-md"
+          : "p-10 mt-5 bg-gray-700 rounded-md hover:bg-gray-900 transition-all ease-in shadow-md"
       }
     >
       {props.children}
@@ -15,8 +15,8 @@ const Card = (props) => {
       <p
         className={
           props.active
-            ? "mt-3 uppercase text-white"
-            : "mt-3 uppercase text-red-500"
+            ? "mt-3 uppercase text-white hover:translate-x-3 transition-all ease-linear"
+            : "mt-3 uppercase text-red-500 hover:translate-x-3 transition-all ease-linear"
         }
       >
         Know More
