@@ -13,9 +13,17 @@ const Footer = () => {
         AliceSmith.
       </h1>
       <div className="flex mt-5 md:mt-0 md:justify-center">
-        <BsFacebook color="white" size={20} className="mr-4" />
-        <BsTwitter color="white" size={20} className="mr-4" />
-        <BsYoutube color="white" size={20} />
+        <BsFacebook
+          color="white"
+          size={20}
+          className="mr-4 hover:text-red-500"
+        />
+        <BsTwitter
+          color="white"
+          size={20}
+          className="mr-4 hover:text-red-500"
+        />
+        <BsYoutube color="white" size={20} className="hover:text-red-500" />
       </div>
       <div className="flex justify-center items-center mt-5 md:mt-0">
         <BsFillHeartFill className="mr-2" color="red" />

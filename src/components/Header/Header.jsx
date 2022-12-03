@@ -10,21 +10,24 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-5 px-3 md:max-w-[1200px] md:m-auto">
+      <header
+        id="home"
+        className="flex justify-between items-center py-5 px-3 md:max-w-[1200px] md:m-auto"
+      >
         <h1 className="text-3xl text-red-500">AliceSmith.</h1>
         <nav className="hidden md:flex">
           <ul className="flex text-white">
             <li className="p-3 hover:text-red-500 transition-all ease-in">
-              Home
+              <a href="#home">Home</a>
             </li>
             <li className="p-3 hover:text-red-500 transition-all ease-in">
-              Services
+              <a href="#main-service-area">Services</a>
             </li>
             <li className="p-3 hover:text-red-500 transition-all ease-in">
-              Experience
+              <a href="#main-service-area">Experience</a>
             </li>
             <li className="p-3 hover:text-red-500 transition-all ease-in">
-              Projects
+              <a href="#projects">Projects</a>
             </li>
           </ul>
         </nav>
@@ -40,17 +43,29 @@ const Header = () => {
       <div className={!isNavOpen ? "hidden" : "fixed right-0"}>
         <nav className="bg-gray-800 block md:hidden h-screen w-[10rem]">
           <ul className="flex flex-col ease-linear pt-8 text-red-500 overflow-hidden cursor-pointer">
-            <li className="px-5 p-2 transition-all ease-in hover:text-white">
-              Home
+            <li
+              onClick={navHandler}
+              className="px-5 p-2 transition-all ease-in hover:text-white"
+            >
+              <a href="#home">Home</a>
             </li>
-            <li className="px-5 p-2 transition-all ease-in hover:text-white">
-              Services
+            <li
+              onClick={navHandler}
+              className="px-5 p-2 transition-all ease-in hover:text-white"
+            >
+              <a href="#main-service-area">Services</a>
             </li>
-            <li className="px-5 p-2 transition-all ease-in hover:text-white">
-              Experience
+            <li
+              onClick={navHandler}
+              className="px-5 p-2 transition-all ease-in hover:text-white"
+            >
+              <a href="#main-service-area">Experience</a>
             </li>
-            <li className="px-5 p-2 transition-all ease-in hover:text-white">
-              Projects
+            <li
+              onClick={navHandler}
+              className="px-5 p-2 transition-all ease-in hover:text-white"
+            >
+              <a href="#projects">Projects</a>
             </li>
           </ul>
         </nav>

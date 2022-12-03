@@ -16,7 +16,7 @@ const FeaturedProjects = () => {
   });
 
   return (
-    <main className="mt-24 mx-5">
+    <main id="projects" className="mt-24 mx-5">
       <div className="flex justify-between items-center md:w-4/5 md:mx-auto">
         <h2 className="text-2xl text-white uppercase">Featured Projects</h2>
         <button className="px-6 py-3 bg-red-500 hover:bg-red-900 transition-all ease-in rounded-sm shadow-md text-white uppercase">
